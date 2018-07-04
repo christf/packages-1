@@ -1,0 +1,17 @@
+#!/bin/sh
+
+if uci show gluon-setup-mode|grep -q "enabled='1'"
+then
+sleep 30
+cat >/etc/config/gluon-setup-mode<<EOF
+config setup_mode
+  option enabled '0'
+  option configured '1'
+EOF
+else
+  echo executing client simulator ...
+  # while [ true }
+  #do
+# /usr/bin/clientsim
+# done
+fi

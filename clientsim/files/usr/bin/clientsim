@@ -1,0 +1,16 @@
+#!/bin/sh
+
+URLS="http://www.microsoft.com
+http://www.spiegel.de
+http://www.web.de
+http://zeit.de
+http://freifunk.net
+http://www.google.de
+http://www.ipv6test.com
+http://www.bahn.de
+"
+
+for url in $URLS
+do
+  /bin/wget -U 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.6) Gecko/20070802 SeaMonkey/1.1.4' -p -O /dev/null "$url"
+done
